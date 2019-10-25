@@ -4,8 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>0.1.0</Version>
-    <Authors>fiftyonefifty</Authors>
-    <Company>fiftyonefifty</Company>
+    <Authors>fiftyonefifty, emanuelsmarques</Authors>
     <Product />
     <Description>Simple plugin for .NET Core applications to export Hangfire stats to Prometheus.</Description>
     <Copyright>(c) 2019 fiftyonefifty</Copyright>
@@ -16,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Hangfire" Version="1.7.1" />
+    <PackageReference Include="Hangfire" Version="1.7.7" />
     <PackageReference Include="prometheus-net" Version="3.1.4" />
   </ItemGroup>
 
