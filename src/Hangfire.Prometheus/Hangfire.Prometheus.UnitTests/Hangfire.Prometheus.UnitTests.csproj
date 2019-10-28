@@ -17,12 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Hangfire.Prometheus.NetCore\Hangfire.Prometheus.NetCore\Hangfire.Prometheus.NetCore.csproj" />
-    <ProjectReference Include="..\..\Hangfire.Prometheus.NetFramework\Hangfire.Prometheus.NetFramework\Hangfire.Prometheus.NetFramework.csproj" />
     <ProjectReference Include="..\Hangfire.Prometheus.NetCore\Hangfire.Prometheus.NetCore.csproj" />
     <ProjectReference Include="..\Hangfire.Prometheus.NetFramework\Hangfire.Prometheus.NetFramework.csproj" />
     <ProjectReference Include="..\Hangfire.Prometheus\Hangfire.Prometheus.Core.csproj" />
-    <ProjectReference Include="..\Hangfire.Prometheus\Hangfire.Prometheus.csproj" />
   </ItemGroup>
 
 </Project>
