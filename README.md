@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/g6ryyrb7tt7tgkeg?svg=true)](https://ci.appveyor.com/project/emanuelmarques/hangfire-prometheus)
+
+
 # Hangfire.Prometheus
 Simple plugin for .NET Core applications to export Hangfire stats to Prometheus.
 
