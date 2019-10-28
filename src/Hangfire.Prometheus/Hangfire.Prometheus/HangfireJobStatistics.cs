@@ -1,4 +1,4 @@
-﻿namespace Hangfire.Prometheus
+﻿namespace Hangfire.Prometheus.Core
 {
     public class HangfireJobStatistics
     {

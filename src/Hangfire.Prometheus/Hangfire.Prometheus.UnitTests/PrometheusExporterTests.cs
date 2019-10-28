@@ -1,9 +1,15 @@
-﻿using AutoFixture;
-using Moq;
-using Prometheus;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
+
+using AutoFixture;
+
+using Hangfire.Prometheus.Core;
+
+using Moq;
+
+using Prometheus;
+
 using Xunit;
 
 namespace Hangfire.Prometheus.UnitTests
@@ -16,9 +22,9 @@ namespace Hangfire.Prometheus.UnitTests
 
         private IFixture _autoFixture;
 
-        CollectorRegistry _collectorRegistry;
+        private CollectorRegistry _collectorRegistry;
 
-        HangfirePrometheusSettings _settings;
+        private HangfirePrometheusSettings _settings;
 
         private readonly string _metricName = "hangfire_job_count";
         private readonly string _metricHelp = "Number of Hangfire jobs";
@@ -56,7 +62,6 @@ namespace Hangfire.Prometheus.UnitTests
             HangfireJobStatistics hangfireJobStatistics = _autoFixture.Create<HangfireJobStatistics>();
             PerformMetricsTest(hangfireJobStatistics);
             _mockHangfireMonitor.Verify(x => x.GetJobStatistics(), Times.Once);
-
         }
 
         [Fact]

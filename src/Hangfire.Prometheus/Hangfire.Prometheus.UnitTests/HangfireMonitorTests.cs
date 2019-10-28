@@ -1,4 +1,5 @@
 ﻿using AutoFixture;
+using Hangfire.Prometheus.Core;
 using Hangfire.Storage;
 using Hangfire.Storage.Monitoring;
 using Moq;

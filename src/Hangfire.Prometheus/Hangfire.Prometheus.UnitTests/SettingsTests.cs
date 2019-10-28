@@ -1,7 +1,9 @@
-﻿using Prometheus;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+
+using Hangfire.Prometheus.Core;
+
+using Prometheus;
+
 using Xunit;
 
 namespace Hangfire.Prometheus.UnitTests

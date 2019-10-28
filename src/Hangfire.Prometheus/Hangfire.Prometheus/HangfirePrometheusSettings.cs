@@ -1,7 +1,7 @@
 ﻿using Prometheus;
 using System;
 
-namespace Hangfire.Prometheus
+namespace Hangfire.Prometheus.Core
 {
     public class HangfirePrometheusSettings
     {
