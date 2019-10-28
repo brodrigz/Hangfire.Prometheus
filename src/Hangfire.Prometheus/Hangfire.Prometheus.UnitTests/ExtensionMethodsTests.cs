@@ -1,11 +1,11 @@
 ﻿using Hangfire.Prometheus.Core;
 using Hangfire.Prometheus.NetCore;
 using Hangfire.Prometheus.NetFramework;
-using Hangfire.SqlServer;
+
 using Microsoft.AspNetCore.Builder;
 
 using Moq;
-using Owin;
+
 using Xunit;
 
 namespace Hangfire.Prometheus.UnitTests

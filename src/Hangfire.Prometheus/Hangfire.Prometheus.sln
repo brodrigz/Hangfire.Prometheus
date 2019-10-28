@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Prometheus.UnitTes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Prometheus.Core", "Hangfire.Prometheus\Hangfire.Prometheus.Core.csproj", "{2111DED7-A319-4FDB-9B6F-358B6F45CD25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Prometheus.NetCore", "..\Hangfire.Prometheus.NetCore\Hangfire.Prometheus.NetCore\Hangfire.Prometheus.NetCore.csproj", "{D4D53466-F2A1-44F3-834E-18CCBE774AB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Prometheus.NetCore", "Hangfire.Prometheus.NetCore\Hangfire.Prometheus.NetCore.csproj", "{60A28CC1-178C-4D10-B2D1-78556D2A21ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Prometheus.NetFramework", "..\Hangfire.Prometheus.NetFramework\Hangfire.Prometheus.NetFramework\Hangfire.Prometheus.NetFramework.csproj", "{4FB926E3-8128-40E7-BC08-D4AA051A260D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Prometheus.NetFramework", "Hangfire.Prometheus.NetFramework\Hangfire.Prometheus.NetFramework.csproj", "{F30A3906-3A4F-4C33-88D5-47F6D21F9FD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{2111DED7-A319-4FDB-9B6F-358B6F45CD25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2111DED7-A319-4FDB-9B6F-358B6F45CD25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2111DED7-A319-4FDB-9B6F-358B6F45CD25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4D53466-F2A1-44F3-834E-18CCBE774AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4D53466-F2A1-44F3-834E-18CCBE774AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4D53466-F2A1-44F3-834E-18CCBE774AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4D53466-F2A1-44F3-834E-18CCBE774AB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FB926E3-8128-40E7-BC08-D4AA051A260D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FB926E3-8128-40E7-BC08-D4AA051A260D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FB926E3-8128-40E7-BC08-D4AA051A260D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FB926E3-8128-40E7-BC08-D4AA051A260D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A28CC1-178C-4D10-B2D1-78556D2A21ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A28CC1-178C-4D10-B2D1-78556D2A21ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A28CC1-178C-4D10-B2D1-78556D2A21ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A28CC1-178C-4D10-B2D1-78556D2A21ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F30A3906-3A4F-4C33-88D5-47F6D21F9FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F30A3906-3A4F-4C33-88D5-47F6D21F9FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F30A3906-3A4F-4C33-88D5-47F6D21F9FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F30A3906-3A4F-4C33-88D5-47F6D21F9FD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
