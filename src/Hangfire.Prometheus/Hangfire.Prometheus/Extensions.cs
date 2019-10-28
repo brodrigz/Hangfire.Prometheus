@@ -16,14 +16,13 @@ namespace Hangfire.Prometheus
             settings = settings ?? new HangfirePrometheusSettings();
 
             JobStorage js = (JobStorage)app.ApplicationServices.GetService(typeof(JobStorage));
-            if (js == null)
+            if (js != null)
             {
-                throw new Exception("Cannot find Hangfire JobStorage class.");
+                IHangfireMonitorService hangfireMonitor = new HangfireMonitorService(js);
+                IPrometheusExporter exporter = new HangfirePrometheusExporter(hangfireMonitor, settings);
+                Metrics.DefaultRegistry.AddBeforeCollectCallback(() => exporter.ExportHangfireStatistics());
             }
 
-            IHangfireMonitorService hangfireMonitor = new HangfireMonitorService(js);
-            IPrometheusExporter exporter = new HangfirePrometheusExporter(hangfireMonitor, settings);
-            Metrics.DefaultRegistry.AddBeforeCollectCallback(() => exporter.ExportHangfireStatistics());
             return app;
         }
     }
