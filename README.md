@@ -2,7 +2,7 @@
 
 
 # Hangfire.Prometheus
-Simple plugin for .NET Core applications to export Hangfire stats to Prometheus.
+Simple plugin for .NET Core and .NET Framework applications to export Hangfire stats to Prometheus.
 
 # Description
 The plugin uses the Hangfire JobStorage class to export metric "hangfire_job_count" using "state" label to indicate jobs in various states. The metrics are updated before every scrape. The states exported are:
@@ -15,8 +15,9 @@ The plugin uses the Hangfire JobStorage class to export metric "hangfire_job_cou
 * Retry
 
 # Usage
-Hangfire.Prometheus plugin is initialized in Configure() using UseHangfirePrometheusExporter() method. Hangfire job storage must already be initialized.
+Hangfire.Prometheus plugin is initialized in Configure() using UseHangfirePrometheusExporter() method. Hangfire job storage must already be initialized. If the job storage is not initialized, the exporter will not be initialized as well, and will report no error.
 
+# .NET Core
 ```
 public void ConfigureServices(IServiceCollection services)
 {
