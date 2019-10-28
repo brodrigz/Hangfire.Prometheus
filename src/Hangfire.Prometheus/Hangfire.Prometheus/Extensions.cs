@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+
+using Microsoft.AspNetCore.Builder;
+
+using Owin;
+
 using Prometheus;
-using System;
 
 namespace Hangfire.Prometheus
 {
@@ -21,6 +25,29 @@ namespace Hangfire.Prometheus
                 IHangfireMonitorService hangfireMonitor = new HangfireMonitorService(js);
                 IPrometheusExporter exporter = new HangfirePrometheusExporter(hangfireMonitor, settings);
                 Metrics.DefaultRegistry.AddBeforeCollectCallback(() => exporter.ExportHangfireStatistics());
+            }
+
+            return app;
+        }
+
+        public static IAppBuilder UsePrometheusHangfireExporter(this IAppBuilder app, HangfirePrometheusSettings settings = null)
+        {
+            settings = settings ?? new HangfirePrometheusSettings();
+
+            try
+            {
+                JobStorage js = JobStorage.Current;
+
+                if (js != null)
+                {
+                    IHangfireMonitorService hangfireMonitor = new HangfireMonitorService(js);
+                    IPrometheusExporter exporter = new HangfirePrometheusExporter(hangfireMonitor, settings);
+                    Metrics.DefaultRegistry.AddBeforeCollectCallback(() => exporter.ExportHangfireStatistics());
+                }
+            }
+            catch (Exception)
+            {
+                return app;
             }
 
             return app;
